@@ -8,6 +8,7 @@ if(isset($_POST['sub'])){
     $sql = "INSERT INTO personne (matiere, note, date) VALUES (:matiere, :note, :date)";
     $stemt = $pdo->prepare($sql);
     $stemt->execute(['matiere' => $matiere, 'note' => $note, 'date' => $date]);
+    header('location: voir.php');
     echo "Données insérées avec succès";
 } else{
   echo "Veuillez remplir tous les champs!!";
