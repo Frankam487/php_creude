@@ -21,12 +21,17 @@ require  "./db.php";
       <th>Actions</th>
     </tr>
     <?php
-    $sql = "SELECT FROM personne";
+    $sql = "SELECT * FROM `personne`";
 
     $stmt = $pdo->query($sql);
     while($rows = $stmt->fetch()){
-      echo $rows['id'] ;
-      echo $rows['matiere'] ;
+      echo "<tr>";
+      echo "<td>".$rows['id']."</td>";
+      echo "<td>".$rows['matiere']."</td>";
+      echo "<td>".$rows['note']."</td>";
+      
+      echo "</tr>";
+      
     }
     ?>
    
