@@ -31,13 +31,18 @@ require  "./db.php";
       echo "<td>" . $rows['id'] . "</td>";
       echo "<td>" . $rows['matiere'] . "</td>";
       echo "<td>" . $rows['note'] . "</td>";
-
+echo "<td>
+<a href='?supp' onclick='return confirm(\"supprimer?\");'>Supprimer</a> | <a href='?edit'>Editer</a>
+</td>";
       echo "</tr>";
     }
     ?>
 
 
   </table>
+  <?php
+  
+  ?>
   <div class="btn">
 
     <a href="./index.php">Acceuil</a>
