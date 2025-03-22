@@ -11,8 +11,7 @@ require  "./db.php";
 </head>
 <body>
   <?php
-  $sql = "SELECT FROM peesonne";
-  $stmt = $pdo->query($sql);
+  
   ?>
   <table>
     <tr>
@@ -22,8 +21,12 @@ require  "./db.php";
       <th>Actions</th>
     </tr>
     <?php
+    $sql = "SELECT FROM personne";
+
+    $stmt = $pdo->query($sql);
     while($rows = $stmt->fetch()){
       echo $rows['id'] ;
+      echo $rows['matiere'] ;
     }
     ?>
    
